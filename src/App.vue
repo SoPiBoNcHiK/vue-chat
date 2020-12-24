@@ -1,18 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Container :chatInfo="chatInfo"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Container from './components/Container.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Container,
+  },
+  data() {
+    return {
+      chatInfo: {
+        username : 'Ivan',
+        datetime : '21.12.2019 23:20:0',
+      },
+    };
+  },
 }
 </script>
 
