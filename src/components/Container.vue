@@ -1,18 +1,18 @@
 <template>
   <div class="container">
-      <ChatMessage :username="chatInfo.username" :datetime="chatInfo.datetime" />
+      <ChatWindow :chatInfo="chatInfo"/>
   </div>
 </template>
 
 
 
 <script>
-import ChatMessage from './ChatMessage.vue'
+import ChatWindow from "./ChatWindow"
 
 export default {
   name: "Container",
   components: {
-      ChatMessage,
+      ChatWindow,
   },
   props: ['chatInfo'],
 };
