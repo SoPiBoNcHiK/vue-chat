@@ -1,26 +1,16 @@
 <template>
-  <div class="container">
     <div class="chat-window">
-      <div class="chat-messages">
-        <div class="scroll-wrapper">
-          <ChatMessage :username="chatInfo.username" :datetime="chatInfo.datetime"/>
-        </div>
+    <div class="chat-messages">
+      <div class="scroll-wrapper">
+        <slot></slot>
       </div>
-      <div class="chat-send-panel">
-        <input
-          type="text"
-          placeholder="Ваш никнейм..."
-          class="chat-send-name-field"
-        />
-        <input
-          type="text"
-          placeholder="Сообщение..."
-          class="chat-send-message-field"
-        />
-        <button>
-          <img src="/img/send.png" />
-        </button>
-      </div>
+    </div>
+    <div class="chat-send-panel">
+      <input type="text" placeholder="Ваш никнейм..." class="chat-send-name-field" />
+      <input type="text" placeholder="Сообщение..." class="chat-send-message-field"/>
+      <button>
+        <img src="/img/send.png" />
+      </button>
     </div>
   </div>
 </template>
@@ -28,14 +18,18 @@
 
 
 <script>
-import ChatMessage from "./ChatMessage.vue";
 
 export default {
   name: "ChatWindow",
-  components: {
-    ChatMessage,
-  },
   props: ["chatInfo"],
+  methods: {
+      completeChat(){
+          
+      }
+  },
+  mounted(){
+      this.completeChat();
+  }
 };
 </script>
 

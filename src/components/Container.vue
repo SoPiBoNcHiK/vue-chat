@@ -1,19 +1,15 @@
 <template>
   <div class="container">
-      <ChatWindow :chatInfo="chatInfo"/>
+      <slot></slot>
   </div>
 </template>
 
 
 
 <script>
-import ChatWindow from "./ChatWindow"
 
 export default {
   name: "Container",
-  components: {
-      ChatWindow,
-  },
   props: ['chatInfo'],
 };
 </script>
